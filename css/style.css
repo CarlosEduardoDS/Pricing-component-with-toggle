@@ -238,3 +238,42 @@ body {
         left: 5px;
     }
 }
+
+@media (max-width:1000px){
+
+    body{
+        height: 100%;
+    }
+
+    .toggle-title{
+        margin-top: 40px;
+    }
+
+    .plan-cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+        padding: 20px;
+        padding-top: 27px;
+        box-sizing: border-box;
+    
+        background-color: white;
+        color: hsl(232, 13%, 33%);
+    
+        height: 400px;
+        width: 300px;
+    
+        border-radius: 10px;
+    }
+
+    #professionalPlan {
+        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        height: 400px;
+        color: white;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
