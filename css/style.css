@@ -7,8 +7,6 @@
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 15px;
-
-    transition: 150ms;
 }
 
 body {
@@ -154,6 +152,9 @@ body {
     border-radius: 5px;
 
     padding: 0;
+
+    cursor: pointer;
+    transition: 250ms;
 }
 
 .button-side:hover {
@@ -175,6 +176,9 @@ body {
     border-radius: 5px;
 
     padding: 0;
+
+    cursor: pointer;
+    transition: 250ms;
 }
 
 #botaoMeio:hover {
@@ -191,13 +195,12 @@ body {
 #checkboxEstadoMensal {
     position: relative;
     padding: 5px;
-    
     height: 20px;
     width: 50px;
-
     border-radius: 20px;
-
     background: hsl(236, 72%, 79%);
+    background-color: hsl(236, 72%, 79%);
+    cursor: pointer;
 }
 
 #bola {
@@ -207,36 +210,15 @@ body {
     border-radius: 50%;
     left: 5px;
     background-color: rgb(255, 255, 255);
-    animation: toggleOn 200ms linear forwards;
+    transition: left 200ms ease-in-out; /* Transição suave para o movimento */
 }
 
 #estados:checked + #checkboxEstadoMensal > #bola {
-    animation: toggleOff 200ms linear forwards;
+    left: 35px; /* Move o círculo suavemente para a direita */
 }
 
 #estados:checked + #checkboxEstadoMensal {
-    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-}
-
-
-@keyframes toggleOn {
-    from {
-        left: 5px;
-    }
-
-    to {
-        left: 35px;
-    }
-}
-
-@keyframes toggleOff {
-    from {
-        left: 35px;
-    }
-
-    to {
-        left: 5px;
-    }
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%)); /* Altera o background suavemente */
 }
 
 @media (max-width:1000px){
