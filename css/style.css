@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+
+    transition: 150ms;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    position: relative;
+
+    background-color: hsl(240, 78%, 98%);
+}
+
+.svg-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 353px;
+    height: 304px;
+    z-index: 0;
+}
+
+.svg-top {
+    position: absolute;
+    top: -50px;
+    right: -15px;
+    width: 250px;
+    height: 100%;
+    z-index: 0;
+    scale: 0.85;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.toggle,
+.container,
+.toggle-title {
+    z-index: 2;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+
+    margin-block: 30px;
+}
+
+.toggle-title {
+    font-size: 24px;
+    color: hsl(232, 13%, 33%);
+}
+
+.toggle p {
+    color: hsl(234, 14%, 74%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+    padding-top: 27px;
+    box-sizing: border-box;
+
+    background-color: white;
+    color: hsl(232, 13%, 33%);
+
+    height: 400px;
+    width: 300px;
+
+    border-radius: 10px;
+}
+
+#professionalPlan {
+    height: 440px;
+    padding-top: 47px;
+    padding-bottom: 40px;
+
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+
+    color: white;
+}
+
+.price {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.price p span {
+    font-size: 55px;
+}
+
+.price p {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.normal-text {
+    height: 50px;
+    width: 95%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+#basicGiga,
+#professionalGiga,
+#masterGiga {
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    margin-bottom: 20px;
+}
+
+.button-side {
+    height: 40px;
+    width: 100%;
+
+    color: white;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+    border: 0;
+    border-radius: 5px;
+
+    padding: 0;
+}
+
+.button-side:hover {
+    color: hsl(237, 63%, 64%);
+
+    background: #fff;
+
+    border: 1px solid hsl(237, 63%, 64%);
+}
+
+#botaoMeio {
+    height: 40px;
+    width: 100%;
+
+    background: white;
+    color: hsl(237, 63%, 64%);
+
+    border: 0;
+    border-radius: 5px;
+
+    padding: 0;
+}
+
+#botaoMeio:hover {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    border: 1px solid white;
+}
+
+#estados {
+    position: absolute;
+    visibility: hidden;
+}
+
+#checkboxEstadoMensal {
+    position: relative;
+    padding: 5px;
+    
+    height: 20px;
+    width: 50px;
+
+    border-radius: 20px;
+
+    background: hsl(236, 72%, 79%);
+}
+
+#bola {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    animation: toggleOn 200ms linear forwards;
+}
+
+#estados:checked + #checkboxEstadoMensal > #bola {
+    animation: toggleOff 200ms linear forwards;
+}
+
+#estados:checked + #checkboxEstadoMensal {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+
+@keyframes toggleOn {
+    from {
+        left: 5px;
+    }
+
+    to {
+        left: 35px;
+    }
+}
+
+@keyframes toggleOff {
+    from {
+        left: 35px;
+    }
+
+    to {
+        left: 5px;
+    }
+}
